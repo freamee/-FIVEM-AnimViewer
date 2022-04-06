@@ -9,21 +9,12 @@ escrow_ignore {
 }
 
 server_scripts {
+    'server_config.lua',
     'files/server.js'
 }
 
 client_scripts {
     'files/client.js'
-}
-
-dependencies {
-    'yarn'
-}
-
-ui_page 'files/nui/index.html'
-
-files {
-    'files/nui/**',
 }
 
 game 'gta5'

@@ -32,10 +32,9 @@ new class AnimViewer
 
     constructor()
     {
-        RegisterCommand('animviewer', () =>
-        {
+        onNet('open_animviewer', () => {
             this.open();
-        }, false);
+        });
     }
     open()
     {
@@ -267,5 +266,7 @@ new class AnimViewer
 
         this.AnimationList = found;
         this.Notification(`Found ${this.AnimationList.length - 1} animations with search: '${result}'.`);
+        /** Reset the anim index to zero. (start) */
+        this.animIndex = 0;
     }
 }
